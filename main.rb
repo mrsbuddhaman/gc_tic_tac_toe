@@ -44,10 +44,12 @@ def player_markers
 	puts "Player 1 is #{@player_1} and Player 2 is #{@player_2}."
 end
 
- # new_board("Would you like to play a game?")
- # new_board("The current board is:")
- # player_markers
+ 
+  player_markers
 
- # puts "Player 1, please choose a square, from 1-9"
- # gets.to_i
+  puts "Player 1, (#{@player_1})- please choose a square between 0 and 8"
+  move = gets.to_i
+  
+  current_board_array[move] = "#{@player_1}"
+  board("Player 1 (#{@player_1}) chose space #{move}", current_board_array)
 
